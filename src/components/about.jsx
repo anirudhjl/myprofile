@@ -7,7 +7,11 @@ function About() {
       <p>
         I'm a software engineer from Bangalore currently working in Mumbai at{" "}
         <strong>
-          <a href="https://www.lntinfotech.com/" target="_blank">
+          <a
+            href="https://www.lntinfotech.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
             LTI
           </a>
         </strong>{" "}

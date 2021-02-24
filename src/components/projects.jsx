@@ -9,7 +9,11 @@ function Projects() {
         Involved in software development using JavaScript and jQuery along with
         issue fixing related work for{" "}
         <strong>
-          <a href="https://www.citigroup.com/citi/" target="_blank">
+          <a
+            href="https://www.citigroup.com/citi/"
+            target="_blank"
+            rel="noreferrer"
+          >
             Citigroup
           </a>
         </strong>
@@ -18,7 +22,11 @@ function Projects() {
         Recent activity involved front end development of an online recruitment
         platform for{" "}
         <strong>
-          <a href="https://www.citigroup.com/citi/" target="_blank">
+          <a
+            href="https://www.citigroup.com/citi/"
+            target="_blank"
+            rel="noreferrer"
+          >
             Citigroup
           </a>
         </strong>
