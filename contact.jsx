@@ -14,16 +14,16 @@ class Contact extends React.Component {
   }
 
   handleSubmit(event) {
-    event.preventDefault();
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": event.target.getAttribute("name"),
+        "form-name": "contact",
         ...this.state,
       }),
     }).then(() => console.log(this.state));
     this.props.history.push("/");
+    event.preventDefault();
   }
 
   render() {
@@ -34,7 +34,7 @@ class Contact extends React.Component {
           className="form-group"
           name="contact"
           method="POST"
-          data-netlify="true"
+          netlify
           onSubmit={this.handleSubmit}
         >
           {" "}
