@@ -6,17 +6,9 @@ function About() {
     <div className="container" style={{ padding: "10%" }}>
       <p>
         I'm a software engineer from Bangalore currently working in Mumbai at{" "}
-        <strong>
-          <a
-            href="https://www.lntinfotech.com/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            LTI
-          </a>
-        </strong>{" "}
-        having 1.5 years of experience in the field of front end web development
-        with knowledge in libraries like jQuery, React.
+        <strong style={{ color: "#007bff" }}>LTI</strong> having 1.5 years of
+        experience in the field of front end web development with knowledge in
+        libraries like jQuery, React.
       </p>
       <br />
       <p>
