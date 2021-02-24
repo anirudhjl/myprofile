@@ -12,7 +12,7 @@ function About() {
       </p>
       <br />
       <p>
-        <a href="/skills">Skills</a>
+        <a href="https://anirudhjl.netlify.app/skills">Skills</a>
       </p>
       <br />
     </div>
