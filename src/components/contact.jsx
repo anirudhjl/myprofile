@@ -17,11 +17,13 @@ class Contact extends React.Component {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state }),
-    });
-    event.preventDefault();
-    console.log(this.state);
+      body: encode({
+        "form-name": "contact",
+        ...this.state,
+      }),
+    }).then(() => console.log(this.state));
     this.props.history.push("/");
+    event.preventDefault();
   }
 
   render() {
@@ -30,11 +32,10 @@ class Contact extends React.Component {
         <p style={{ paddingBottom: "1%" }}>Have a question/message?</p>
         <form
           className="form-group"
-          data-netlify="true"
           name="contact"
           method="POST"
+          data-netlify="true"
           onSubmit={this.handleSubmit}
-          data-netlify-honeypot="bot-field"
         >
           {" "}
           <input type="hidden" name="form-name" value="contact" />

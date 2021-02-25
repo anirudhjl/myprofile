@@ -10,7 +10,7 @@ class Footer extends React.Component {
         className="container"
         style={{
           textAlign: "center",
-          position: "absolute",
+          position: "sticky",
           left: 0,
           bottom: 0,
           right: 0,
