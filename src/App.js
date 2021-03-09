@@ -8,7 +8,7 @@ import Contact from "./components/contact";
 import Projects from "./components/projects";
 import Skills from "./components/skills";
 
-function App() {
+const App = () => {
   return (
     <div style={{ backgroundColor: "black", height: "100vh" }}>
       <BrowserRouter>
@@ -24,6 +24,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;
