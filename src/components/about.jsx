@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function About() {
+const About = () => {
   return (
     <div className="container" style={{ padding: "10%" }}>
       <p>
@@ -17,6 +17,6 @@ function About() {
       <br />
     </div>
   );
-}
+};
 
 export default About;

@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import Resume from "../File/AnirudhJLResume.pdf";
 
-function Skills() {
+const Skills = () => {
   return (
     <div className="container" style={{ padding: "10%" }}>
       <p>
@@ -19,6 +19,6 @@ function Skills() {
       <br />
     </div>
   );
-}
+};
 
 export default Skills;

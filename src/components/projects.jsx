@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function Projects() {
+const Projects = () => {
   return (
     <div className="container" style={{ padding: "10%" }}>
       <br />
@@ -33,6 +33,6 @@ function Projects() {
       </p>
     </div>
   );
-}
+};
 
 export default Projects;

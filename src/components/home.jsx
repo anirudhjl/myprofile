@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import Image from "../Images/profile.jpg";
 
-function Home() {
+const Home = () => {
   return (
     <div className="container" style={{ padding: "6%" }}>
       <br />
@@ -20,6 +20,6 @@ function Home() {
       <br />
     </div>
   );
-}
+};
 
 export default Home;
