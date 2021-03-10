@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const encode = (data) => {
   return Object.keys(data)
@@ -6,66 +7,71 @@ const encode = (data) => {
     .join("&");
 };
 
-class Contact extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { email: "", message: "" };
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+const Contact = () => {
+  let history = useHistory();
+  const [state, setState] = useState({ email: "", message: "" });
 
-  handleSubmit(event) {
+  const handleChange = (event) => {
+    event.preventDefault();
+    setState((prevState) => ({
+      ...prevState,
+      [event.target.name]: event.target.value,
+    }));
+  };
+
+  const handleSubmit = (event) => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": "contact",
-        ...this.state,
+        ...state,
       }),
-    }).then(() => console.log(this.state));
-    this.props.history.push("/");
+    })
+      .then(() => console.log(state.message))
+      .catch((error) => alert(error));
+    history.push("/");
     event.preventDefault();
-  }
+  };
 
-  render() {
-    return (
-      <div className="container" style={{ padding: "6%" }}>
-        <p style={{ paddingBottom: "1%" }}>Have a question/message?</p>
-        <form
-          className="form-group"
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          onSubmit={this.handleSubmit}
-        >
-          {" "}
-          <input type="hidden" name="form-name" value="contact" />
-          <input
-            name="email"
-            type="email"
-            onChange={(e) => this.setState({ email: e.target.value })}
-            className="form-control"
-            id="email"
-            placeholder="Your email..."
-            required
-          />
-          <br />
-          <textarea
-            name="message"
-            className="form-control"
-            id="message"
-            placeholder="Message..."
-            onChange={(e) => this.setState({ message: e.target.value })}
-            required
-          />
-          <br />
-          <button className="btn btn-primary" type="submit">
-            Submit
-          </button>
-        </form>
+  return (
+    <div className="container" style={{ padding: "6%" }}>
+      <p style={{ paddingBottom: "1%" }}>Have a question/message?</p>
+      <form
+        className="form-group"
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        onSubmit={handleSubmit}
+      >
+        {" "}
+        <input type="hidden" name="form-name" value="contact" />
+        <input
+          name="email"
+          type="email"
+          id="email"
+          className="form-control"
+          placeholder="Your email..."
+          onChange={handleChange}
+          required
+        />
         <br />
-      </div>
-    );
-  }
-}
+        <textarea
+          name="message"
+          id="message"
+          className="form-control"
+          placeholder="Message..."
+          onChange={handleChange}
+          required
+        />
+        <br />
+        <button className="btn btn-primary" type="submit">
+          Submit
+        </button>
+      </form>
+      <br />
+    </div>
+  );
+};
 
 export default Contact;
