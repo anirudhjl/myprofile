@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 const encode = (data) => {
@@ -10,6 +10,13 @@ const encode = (data) => {
 const Contact = () => {
   let history = useHistory();
   const [state, setState] = useState({ email: "", message: "" });
+  const [success, setSuccess] = useState(false);
+
+  useEffect(() => {
+    if (window.location.search.includes("success=true")) {
+      setSuccess(true);
+    }
+  }, []);
 
   const handleChange = (event) => {
     event.preventDefault();
@@ -37,17 +44,20 @@ const Contact = () => {
   return (
     <div className="container" style={{ padding: "6%" }}>
       <p style={{ paddingBottom: "1%" }}>Have a question/message?</p>
+      {success && <p style={{ color: "white" }}>Thanks for your message! </p>}
       <form
-        className="form-group"
         name="contact"
         method="POST"
+        action="/contact/?success=true"
         data-netlify="true"
+        className="form-group"
         onSubmit={handleSubmit}
       >
         {" "}
         <input type="hidden" name="form-name" value="contact" />
         <input
           name="email"
+          label="email"
           type="email"
           id="email"
           className="form-control"
@@ -58,6 +68,7 @@ const Contact = () => {
         <br />
         <textarea
           name="message"
+          label="message"
           id="message"
           className="form-control"
           placeholder="Message..."
