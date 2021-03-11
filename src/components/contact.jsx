@@ -1,22 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-
-const encode = (data) => {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-};
 
 const Contact = () => {
   let history = useHistory();
   const [state, setState] = useState({ email: "", message: "" });
-  const [success, setSuccess] = useState(false);
-
-  useEffect(() => {
-    if (window.location.search.includes("success=true")) {
-      setSuccess(true);
-    }
-  }, []);
 
   const handleChange = (event) => {
     event.preventDefault();
@@ -27,28 +14,18 @@ const Contact = () => {
   };
 
   const handleSubmit = (event) => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": "contact",
-        ...state,
-      }),
-    })
-      .then(() => console.log(state.message))
-      .catch((error) => alert(error));
-    history.push("/");
     event.preventDefault();
+    console.log(state);
+    alert("Message sent");
+    history.push("/");
   };
 
   return (
     <div className="container" style={{ padding: "6%" }}>
       <p style={{ paddingBottom: "1%" }}>Have a question/message?</p>
-      {success && <p style={{ color: "white" }}>Thanks for your message! </p>}
       <form
         name="contact"
         method="POST"
-        action="/contact/?success=true"
         data-netlify="true"
         className="form-group"
         onSubmit={handleSubmit}
@@ -57,9 +34,7 @@ const Contact = () => {
         <input type="hidden" name="form-name" value="contact" />
         <input
           name="email"
-          label="email"
           type="email"
-          id="email"
           className="form-control"
           placeholder="Your email..."
           onChange={handleChange}
@@ -68,8 +43,6 @@ const Contact = () => {
         <br />
         <textarea
           name="message"
-          label="message"
-          id="message"
           className="form-control"
           placeholder="Message..."
           onChange={handleChange}
