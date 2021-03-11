@@ -44,6 +44,7 @@ const Contact = () => {
         <input
           name="email"
           type="email"
+          label="email"
           className="form-control"
           placeholder="Your email..."
           onChange={handleChange}
@@ -52,6 +53,7 @@ const Contact = () => {
         <br />
         <textarea
           name="message"
+          label="message"
           className="form-control"
           placeholder="Message..."
           onChange={handleChange}
