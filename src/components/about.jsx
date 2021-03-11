@@ -12,7 +12,7 @@ const About = () => {
       </p>
       <br />
       <p>
-        <a href="/skills">Skills</a>
+        <a href="/about/skills">Skills</a>
       </p>
       <br />
     </div>
