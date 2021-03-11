@@ -8,14 +8,26 @@
       name="description"
       content="Hello, I'm Anirudh. I'm a front end web developer. And this is my website :)"
     />
+    <link rel="stylesheet" href="index.css" />
     <title>Anirudh - profile</title>
   </head>
   <body>
-    <form name="contact" netlify netlify-honeypot="bot-field" action="/" hidden>
-      <input type="email" name="email" />
-      <textarea name="message"></textarea>
-    </form>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="wrapper">
+      <form
+        name="contact"
+        netlify
+        netlify-honeypot="bot-field"
+        action="/"
+        hidden
+      >
+        <input type="email" name="email" />
+        <textarea name="message"></textarea>
+      </form>
+      <noscript>You need to enable JavaScript to run this app.</noscript>
+      <div id="root"></div>
+    </div>
+    <div id="warning-message">
+      <p>This website is only viewable in landscape mode</p>
+    </div>
   </body>
 </html>
