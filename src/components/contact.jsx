@@ -1,9 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 const Contact = () => {
   let history = useHistory();
   const [state, setState] = useState({ email: "", message: "" });
+  const [success, setSuccess] = useState(false);
+
+  useEffect(() => {
+    if (window.location.search.includes("success=true")) {
+      setSuccess(true);
+    }
+  }, []);
 
   const handleChange = (event) => {
     event.preventDefault();
@@ -23,9 +30,11 @@ const Contact = () => {
   return (
     <div className="container" style={{ padding: "6%" }}>
       <p style={{ paddingBottom: "1%" }}>Have a question/message?</p>
+      {success && <p style={{ color: "green" }}>Thanks for your message!</p>}
       <form
         name="contact"
         method="POST"
+        action="/contact/?success=true"
         data-netlify="true"
         className="form-group"
         onSubmit={handleSubmit}
