@@ -1,0 +1,15 @@
+{
+  "short_name": "Anirudh J L",
+  "name": "Anirudh - profile",
+  "icons": [
+    {
+      "src": "/static/media/profile.1a72ed09.jpg",
+      "sizes": "1044x1044",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "black"
+}
