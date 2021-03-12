@@ -31,7 +31,7 @@ const Contact = () => {
       .then(() => console.log(state.message))
       .catch((error) => alert(error));
     event.preventDefault();
-    history.push("/contact/success");
+    history.push("/success");
   };
 
   return (
