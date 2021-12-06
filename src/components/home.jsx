@@ -1,4 +1,3 @@
-import React from "react";
 import "./style.css";
 import Image from "../Images/profile.jpg";
 
@@ -16,7 +15,7 @@ const Home = () => {
       <br />
       <br />
       <p>Hello, I'm Anirudh.</p>
-      <p>I'm a front end web developer.</p>
+      <p>I'm a Web developer.</p>
       <br />
     </div>
   );

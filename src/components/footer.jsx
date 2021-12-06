@@ -1,4 +1,3 @@
-import React from "react";
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { CgMail } from "react-icons/cg";
 import { IconContext } from "react-icons";
@@ -35,10 +34,7 @@ const Footer = () => {
         &nbsp;&nbsp;&nbsp;&nbsp;
         <FaLinkedin
           onClick={() =>
-            window.open(
-              "https://www.linkedin.com/in/anirudh-j-l-94855014b/",
-              "_blank"
-            )
+            window.open("https://www.linkedin.com/in/anirudhjl-022/", "_blank")
           }
         />
         &nbsp;&nbsp;&nbsp;&nbsp;

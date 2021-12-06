@@ -1,4 +1,3 @@
-import React from "react";
 import "./style.css";
 
 const Projects = () => {
@@ -7,29 +6,11 @@ const Projects = () => {
       <br />
       <p>
         Involved in software development using JavaScript and jQuery along with
-        issue fixing related work for{" "}
-        <strong>
-          <a
-            href="https://www.citigroup.com/citi/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Citigroup
-          </a>
-        </strong>
+        issue fixing related work
         <br />
+        Worked on front end development of an online recruitment platform
         <br />
-        Recent activity involved front end development of an online recruitment
-        platform for{" "}
-        <strong>
-          <a
-            href="https://www.citigroup.com/citi/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Citigroup
-          </a>
-        </strong>
+        Currently working with JUnit for a dashboard application project
       </p>
     </div>
   );
