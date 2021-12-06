@@ -9,16 +9,15 @@ const Skills = () => {
         Front end: HTML5, CSS3, Sass, Bootstrap, Tailwind CSS, JavaScript,
         jQuery, React
         <br />
-        Back end: MySQL, MongoDB, C, C#, Python
+        Back end: MySQL, MongoDB, C, Python, Java, Spring Boot
         <br />
-        Dev Tools: Eclipse IDE, VS code, Git, Netlify, Node.js, npm, Jira
+        Dev Tools: Eclipse IDE, VS code, Git, Postman
         <br />
         <br />
         <a href={Resume} download>
           <sub>Download resume(pdf)</sub>
         </a>
       </p>
-
       <br />
     </div>
   );
