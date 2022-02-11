@@ -5,7 +5,7 @@ const About = () => {
     <div className="container" style={{ padding: "10%" }}>
       <p>
         I'm a Software Engineer from Bangalore currently working in Mumbai at{" "}
-        <strong style={{ color: "#007bff" }}>LTI</strong> having 2.3 years of
+        <strong style={{ color: "#007bff" }}>LTI</strong> having 2.5 years of
         experience with knowledge in libraries like jQuery, React and Spring
         Boot.
       </p>
