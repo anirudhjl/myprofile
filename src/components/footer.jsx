@@ -19,6 +19,7 @@ const Footer = () => {
           size: "3em",
           color: "#007BFF",
           className: "global-class-name",
+          cursor: "pointer",
         }}
       >
         <FaFacebook
