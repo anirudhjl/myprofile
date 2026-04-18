@@ -29,7 +29,7 @@ const Footer = () => {
         &nbsp;&nbsp;&nbsp;&nbsp;
         <CgMail
           size="4em"
-          onClick={() => window.open("mailto:anibhat022@gmail.com")}
+          onClick={() => window.open("mailto:anirudhjl91@gmail.com")}
         />
         &nbsp;&nbsp;&nbsp;&nbsp;
         <FaLinkedin

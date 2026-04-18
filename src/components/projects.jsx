@@ -5,12 +5,9 @@ const Projects = () => {
     <div className="container" style={{ padding: "10%" }}>
       <br />
       <p>
-        Involved in software development using JavaScript and jQuery along with
-        issue fixing related work
+        Involved in software development using JavaScript, React, Node.js, Express.js
         <br />
-        Worked on front end development of an online recruitment platform
-        <br />
-        Currently working with JUnit for a dashboard application project
+        Working as a full stack developer on a HCP patient management application
       </p>
     </div>
   );

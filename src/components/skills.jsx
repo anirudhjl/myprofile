@@ -5,11 +5,15 @@ const Skills = () => {
   return (
     <div className="container" style={{ padding: "10%" }}>
       <p>
-        Front end: HTML5, CSS3, Sass, Bootstrap, JavaScript, jQuery, React
+        Backend: Node.js, Express.js, RESTful API Design, Middleware
         <br />
-        Back end: Oracle, C, Python, Java, Spring Boot
+        Frontend: React.js, TypeScript, JavaScript, Redux, Zustand, HTML5, CSS3,
+        Tailwind CSS, Preact, Jest, Cypress
         <br />
-        Dev Tools: Eclipse IDE, VS code, Git, Postman
+        Databases: MySQL, PostgreSQL, Oracle (SQL)
+        <br />
+        Architecture & Practices: Microservices, Modular Architecture,
+        Micro-Frontend Architecture
         <br />
         <br />
         <a href={Resume} download>
